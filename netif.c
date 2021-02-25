@@ -55,7 +55,7 @@ void ndn_netif_auto_add(void)
         gnrc_nettype_t proto;
 
         // get device mtu
-        if (gnrc_netapi_get(iface, NETOPT_MAX_PACKET_SIZE, 0,
+        if (gnrc_netapi_get(iface, NETOPT_MAX_PDU_SIZE, 0,
                             &_netif_table[i].mtu,
                             sizeof(uint16_t)) < 0) {
             DEBUG("ndn: cannot get device mtu (pid=%"
